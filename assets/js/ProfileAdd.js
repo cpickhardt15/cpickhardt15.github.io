@@ -31,22 +31,19 @@ $.getJSON('https://raw.githubusercontent.com/lugnitdgp/Hack-Day-2019/master/data
 
       var profile = profiles[index];
       card.innerHTML =
-            `<td>
-              <div class="card">
-                <div class="row no-gutters">
-                  <div class="col-4">
-                    <img src="${profile['image_link']}" class="card-img" alt="${profile['handle']}">
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body">
-                      <h6 class="card-title">${profile['handle']}</h6>
-                      <p><small>${profile['message']}</small></p>
-                    </div>
+            `<div class="card">
+              <div class="row no-gutters">
+                <div class="col-4">
+                  <img src="${profile['image_link']}" class="card-img" alt="${profile['handle']}">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h6 class="card-title">${profile['handle']}</h6>
+                    <p><small>${profile['message']}</small></p>
                   </div>
                 </div>
               </div>
-            </td>
-        `;
+            </div>`;
       cardParent.appendChild(card);
     }
 });
