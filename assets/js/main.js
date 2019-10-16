@@ -36,28 +36,3 @@ $(function () {
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
     });
 });
-
-// Add pagination to data table containing cards
-$(document).ready(function(){
-    $('#section02').after('<div id="nav"></div>');
-    var rowsShown = 4;
-    var rowsTotal = $('#section02 tbody tr').length;
-    var numPages = rowsTotal/rowsShown;
-    for(i = 0;i < numPages;i++) {
-        var pageNum = i + 1;
-        $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
-    }
-    $('#section02 tbody tr').hide();
-    $('#section02 tbody tr').slice(0, rowsShown).show();
-    $('#nav a:first').addClass('active');
-    $('#nav a').bind('click', function(){
-
-        $('#nav a').removeClass('active');
-        $(this).addClass('active');
-        var currPage = $(this).attr('rel');
-        var startItem = currPage * rowsShown;
-        var endItem = startItem + rowsShown;
-        $('#section02 tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
-                css('display','table-row').animate({opacity:1}, 300);
-    });
-});
