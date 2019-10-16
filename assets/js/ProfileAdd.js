@@ -24,28 +24,27 @@ $.getJSON('https://raw.githubusercontent.com/lugnitdgp/Hack-Day-2019/master/data
     
     var cardParent = document.getElementById('profile-cards');
     for (index = 0; index < profiles.length; index++){
-      var card = document.createElement('div');
+      var card = document.createElement('li');
       card.classList.add('col-12');
       card.classList.add('col-md-4');
       card.classList.add('p-3');
 
       var profile = profiles[index];
       card.innerHTML =
-            `<li>
-              <div class="card">
-                <div class="row no-gutters">
-                  <div class="col-4">
-                    <img src="${profile['image_link']}" class="card-img" alt="${profile['handle']}">
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body">
-                      <h6 class="card-title">${profile['handle']}</h6>
-                      <p><small>${profile['message']}</small></p>
-                    </div>
+            `<div class="card">
+              <div class="row no-gutters">
+                <div class="col-4">
+                  <img src="${profile['image_link']}" class="card-img" alt="${profile['handle']}">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h6 class="card-title">${profile['handle']}</h6>
+                    <p><small>${profile['message']}</small></p>
                   </div>
                 </div>
               </div>
-            </li>`;
+            </div>
+        `;
       cardParent.appendChild(card);
     }
 });
