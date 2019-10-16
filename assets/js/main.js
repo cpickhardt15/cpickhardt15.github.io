@@ -43,7 +43,7 @@ $(document).ready(function(){
     
     for (var i =0 ; i < 10; i++) {
       
-      var $nr = $('<td>' + i + '</td>' + i  + '</td>');
+      var $nr = $('<tr><td>A-' + i + '</td><td>B-' + i  + '</td></tr>');
       table.append($nr);
     }
     
