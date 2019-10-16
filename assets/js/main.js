@@ -39,7 +39,7 @@ $(function () {
 
 // Add pagination to data table containing cards
 $(document).ready(function(){
-    $('#section02').after('</section>');
+    $('#section02').after('<div id="nav"></div>');
     var rowsShown = 4;
     var rowsTotal = $('#section02 tbody tr').length;
     var numPages = rowsTotal/rowsShown;
