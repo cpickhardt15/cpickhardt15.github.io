@@ -40,7 +40,7 @@ $(function () {
 // Add pagination to data table containing cards
 $(document).ready(function () {
     $('#section02').DataTable({
-      "paging": false // false to disable pagination (or any other option)
+        "pagingType": "simple" // "simple" option for 'Previous' and 'Next' buttons only
     });
     $('.dataTables_length').addClass('bs-select');
   });
