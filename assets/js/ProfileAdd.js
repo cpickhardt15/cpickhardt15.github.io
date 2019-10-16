@@ -28,6 +28,7 @@ $.getJSON('https://raw.githubusercontent.com/lugnitdgp/Hack-Day-2019/master/data
       card.classList.add('col-12');
       card.classList.add('col-md-4');
       card.classList.add('p-3');
+      card.classList.add('page-item');
 
       var profile = profiles[index];
       card.innerHTML =
