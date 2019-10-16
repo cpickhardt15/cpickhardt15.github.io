@@ -154,3 +154,6 @@ section {
 .container-tilt-inside {
   transform-style: preserve-3d;
 }
+td {
+  color: white;
+}
